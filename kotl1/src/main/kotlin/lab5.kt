@@ -12,7 +12,8 @@ fun getRandomName() : String {
 }
 
 fun getRandomLastName() : String {
-    val charset = listOf<String>("Chernov", "Pavlov", "Durov","Krylov","Ikhas","Vaserman","Loh")
+    val charset = listOf<String>("Chernov", "Pavlov", "Durov","Krylov","Ikhas","Vaserman",
+        "Loh")
     return  charset.random()
 }
 
@@ -46,12 +47,14 @@ fun phonenum(): MutableList<String>{
     println(phonelist.filter{s -> s.subSequence(0,2)== "+7"})
 
     var phoneset = phonelist.toSet()
-    println("Количество уникальных номеров: " + phoneset.count())
+    println("Количество уникальных номеров: "
+            + phoneset.count())
     i = 0
     var test : MutableList<Int> = mutableListOf()
     for(item in i..phoneset.size){
         var wordlength = phoneset.elementAt(i).length
         test.add(wordlength)
+
     }
     var sumofset = 0
     sumofset += phonelist.sumOf { index -> index.length }
